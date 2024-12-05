@@ -10,10 +10,9 @@ const iconMap = {
 };
 
 const WhyLeadCentral = () => {
-
     useEffect(() => {
         gsap.from(".features", {
-            y: -300,
+            y: -1300,
             duration: 0.9,
             ease: "power3.out",
             delay: 1
