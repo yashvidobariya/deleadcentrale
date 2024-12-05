@@ -21,7 +21,7 @@ const Header = () => {
         tl.from("li", {
             y: -130,
             duration: 1,
-            stagger: 0.2,
+            stagger: 0.1,
         });
     }, []);
 

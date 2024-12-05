@@ -11,14 +11,14 @@ const iconMap = {
 
 const WhyLeadCentral = () => {
 
-    // useEffect(() => {
-    //     gsap.from(".features", {
-    //         y: -300,
-    //         duration: 0.9,
-    //         ease: "power3.out",
-    //         delay: 1
-    //     });
-    // }, []);
+    useEffect(() => {
+        gsap.from(".features", {
+            y: -300,
+            duration: 0.9,
+            ease: "power3.out",
+            delay: 1
+        });
+    }, []);
 
     return (
         <div className="why-lead-central">
