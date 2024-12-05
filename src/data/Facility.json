@@ -1,0 +1,32 @@
+[
+    {
+        "icon": "FaClock",
+        "title": "Leads direct geleverd",
+        "points": [
+            "1.Gegarandeerd eigenaren van vastgoed (particulier en commercieel)",
+            "2.Ontvang binnen enkele seconden een lead in je CMS, mailbox of dashboard",
+            "3.Persoonlijke klantenservice bij vragen",
+            "4.Beste prijs-kwaliteitverhouding"
+        ]
+    },
+    {
+        "icon": "FaMapMarkerAlt",
+        "title": "Leads gematched op postcode",
+        "points": [
+            "1.Koop lokale leads",
+            "2.Geen verplichtingen, stel alles flexibel in",
+            "3.Koop leads door het gehele land",
+            "4.Inclusief foto's van daken"
+        ]
+    },
+    {
+        "icon": "FaCoins",
+        "title": "Flexibiliteit in afname",
+        "points": [
+            "1.Koop één of honderd leads",
+            "2.Geen contract",
+            "3.Pauzeren en starten wanneer je maar wilt",
+            "4.Koop op krediet"
+        ]
+    }
+]
