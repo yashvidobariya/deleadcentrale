@@ -11,11 +11,12 @@ const iconMap = {
 
 const WhyLeadCentral = () => {
     useEffect(() => {
-        gsap.from(".features", {
-            y: -1300,
-            duration: 0.9,
-            ease: "power3.out",
-            delay: 1
+        const tl = gsap.timeline();
+        tl.from(".features", {
+            y: 20,
+            opacity: 0,
+            duration: 0.5,
+            scale: 0.2,
         });
     }, []);
 

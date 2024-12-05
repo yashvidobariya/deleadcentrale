@@ -18,12 +18,12 @@ const Header = () => {
 
     useEffect(() => {
         const tl = gsap.timeline();
-        tl.from("li", {
-            y: -130,
+        tl.from(".header-nav li", {
+            y: -120,
             duration: 1,
             stagger: 0.1,
         });
-    }, []);
+    }, []); // Empty dependency to run once when the component mounts
 
     return (
         <div>

@@ -12,7 +12,8 @@ const Home = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1 }}
                         viewport={{ once: true }}
-                        className="home-content">
+                        className="home-content"
+                    >
                         <p id='home-contenth1'>Leverancier van gekwalificeerde leads voor zonnepanelen en energieopslag</p>
                         <p> <Wave text="Vind hier jouw klanten!" effect="fadeOut" /></p>
                         <div className="home-button">
@@ -26,7 +27,8 @@ const Home = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1 }}
                         viewport={{ once: true }}
-                        className="home-bg">
+                        className="home-bg"
+                    >
                         <img src='./imge/home-bg.png' alt="background" />
                     </motion.div>
 
