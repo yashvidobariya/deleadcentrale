@@ -1,149 +1,56 @@
-import React from 'react'
-import { FaCheckCircle } from "react-icons/fa";
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { SlEnergy } from "react-icons/sl";
+import featureData from "../data/Facility.json";
+import { useGSAP } from "@gsap/react";
+import { FaChargingStation } from "react-icons/fa";
+import { GiSolarPower } from "react-icons/gi";
+import { GiBatteries } from "react-icons/gi";
 
-const Feature = () => {
+const iconMap = {
+    SlEnergy: <SlEnergy />,
+    FaChargingStation: <FaChargingStation />,
+    GiSolarPower: <GiSolarPower />,
+    GiBatteries: <GiBatteries />
+};
+
+const WhyLeadCentral = () => {
+
+    useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".why-lead-central",
+                scrub: true,
+            },
+        });
+
+        tl.from(".features", {
+            opacity: 0,
+            scale: 0,
+            duration: 1,
+        });
+
+    }, []);
+
+
     return (
-        <div className='feature-main'>
-            <div className="feature-section">
-                <div className="feature-flex">
-                    <div className="feature-title">
-                        <h1>Onze leads staan klaar om een offerte te ontvangen</h1>
-                        <p>De Lead Centrale heeft een exclusieve partnership met Solkunder, de meest gerenommeerde leadgenerator voor zonnepanelen installaties in Europa. Door hun uitgebreide ervaring weten zij wat belangrijk is voor de installateur en kunnen we daarmee de hoogste kwaliteit leads leveren. Onze hoogstaande kwaliteit komt door de unieke strategische aanpak. We genereren, valideren en leveren hoogwaardige leads van huiseigenaren voor zonnepanelen (en andere energie-producten) door heel Nederland.</p>
+        <div className="why-lead-central">
+            <h2>Our Services</h2>
+            <div className="features">
+                {featureData.map((feature, index) => (
+                    <div key={index} className="feature-card">
+                        <div className="feature-icon">{iconMap[feature.icon]}</div>
+                        <h3>{feature.title}</h3>
+                        <p>{feature.points}</p>
                     </div>
-
-
-                    <div className="feature-flex-content">
-                        <div className="feature-main-div">
-                            <div className="feature-head">
-                                <h1>Wat kun je verwachten van De Lead Centrale:</h1>
-                            </div>
-                            <div className="feature-content">
-                                <div className="feature-h1">
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Gratis registratie</p>
-                                    </div>
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Geen abonnement en geen minimum afname</p>
-                                    </div>
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Pauzeren en activeren op elk gewenste moment</p>
-                                    </div>
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Eenvoudig wijzigen van het postcode zoekgebied</p>
-                                    </div>
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Dagelijks nieuwe leads</p>
-                                    </div>
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Gespecialiceerd in leads van zonne-energie,<br /> opslag, vervanging en uitbreiding van zonne-<br />installaties</p>
-                                    </div>
-                                </div>
-                                <div className="feature-h1">
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Keuze om dagelijks leads te ontvangen of om via het<br /> platform te kopen</p></div>
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Goede en eerlijke garantie</p></div>
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Actuele leads direct per mail ontvangen</p></div>
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Persoonlijke helpdesk service</p></div>
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>API integratie met je CRM systeem</p></div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div className="feature-main-div">
-                            <div className="feature-head">
-                                <h1>De lead informatie die je van ons krijgt:</h1>
-                            </div>
-                            <div className="feature-content">
-                                <div className="feature-h1">
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Naam van de huiseigenaren</p>
-                                    </div>
-
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Telefoonnummer</p>
-                                    </div>
-
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>E-mailadres</p>
-                                    </div>
-
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Adresgegevens</p>
-                                    </div>
-
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Foto van de woning</p>
-                                    </div>
-
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Type dak</p>
-                                    </div>
-                                </div>
-                                <div className="feature-h1">
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Hellingshoek dak</p>
-                                    </div>
-
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Afmeting dak</p>
-                                    </div>
-
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Richting van het dak</p>
-                                    </div>
-
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Eigendomsstatus</p>
-                                    </div>
-
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Energieverbruik</p>
-                                    </div>
-
-                                    <div className="feature-points">
-                                        <FaCheckCircle className="check-feature" />
-                                        <p>Bedrijfsgegevens</p>
-                                    </div>
-                                </div>
-                                <div className="feature-h1">
-                                    <p>Je ontvangt van ons de informatie die je nodig <br />hebt voor een juiste voorbereiding en een succesvolle verkoop</p>
-                                    <img src='./imge/feature.png' />
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                ))}
             </div>
         </div>
-    )
-}
 
-export default Feature
+    );
+};
+
+export default WhyLeadCentral;
